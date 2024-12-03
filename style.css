@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055,#7597de);
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+ color: #fff;   
+ font-weight: 700;
+ text-decoration: none;
+ font-size: 2em;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+}
+header ul
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover ,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+section img 
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon 
+{
+     mix-blend-mode: screen;
+}
+section img#mountains_front
+{
+    z-index: 10;
+}
+#text
+{
+   position: absolute; 
+   right: -350px;
+   color: #fff;
+   white-space: nowrap;
+   font-size: 7.5vw;
+   z-index: 9;
+}
+#btn
+{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+.circle {
+    height: 500px;
+    width: 100%;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+.c1, .c2 {
+    height: 350px;
+    width: 350px;
+    border-radius: 175px;
+    background-color: #2b1055;
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+.sec h2
+{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-align: center;
+}
+.sec p
+{
+    font-size: 1em;
+    color: #fff;
+}
+.info {
+    /* 800 2000 */
+    height: 500px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: #2b1055;
+    background-size: contain;
+    background-image: url(images/infografis.png);
+}
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Background gelap dengan transparansi */
+    backdrop-filter: blur(5px); /* Efek blur pada latar belakang */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+width: auto;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 3px;
+    right: 20px;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10002;
+}
+.footer {
+	width: 100%;
+	background: #7597de;
+	text-align: center;
+	padding: 10px 0px;
+	color: black;
+}
+
+.footer span {
+	color: black;
+	padding: 10px 0px;
+}
+
+.wrapper {
+	margin: 5px;
+}
+
+.wrapper .social-media {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-out;
+}
+
+.wrapper .social-media:hover {
+	width: 11rem;
+	text-align: left;
+}
+
+/* To rotate icon by 360 degree */
+.wrapper .social-media:hover i {
+	transform: rotate(360deg);
+}
+
+.wrapper .social-media .icon {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.wrapper .social-media .icon i {
+	font-size: 55px;
+	line-height: 50px;
+	color: #fff;
+	transition-duration: 0.8s;
+	transition-property: transform;
+}
+
+/* Set Color for each Icon */
+.wrapper .social-media:nth-child(1) .icon {
+	background: radial-gradient(circle at 30% 140%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.wrapper .social-media:nth-child(2) .icon {
+	background: #0072b1;
+}
+
+.wrapper .social-media:nth-child(3) .icon {
+	background: #171515;
+}
+
+.wrapper .social-media:nth-child(4) .icon {
+	background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+}
+
+.wrapper .social-media span {
+	font-size: 20px;
+	font-weight: 500;
+	margin-left: 10px;
+    margin-top: 20px;
+	transition: all 0.3s ease-out;
+}
+
+/* Set Color for each text */
+.wrapper .social-media:nth-child(1) span {
+	color: #E1306C;
+}
+
+.wrapper .social-media:nth-child(2) span {
+	color: #0072b1;
+}
+
+.wrapper .social-media:nth-child(3) span {
+	color: #171515;
+}
+
+.wrapper .social-media:nth-child(4) span {
+	color: #0d4db4;
+}
+.sm{
+    margin: 0 auto;
+    height: 50px;
+    width:250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.sm1, .sm2, .sm3, .sm4 {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2b1055;
+}
+.sm .sm1 i {
+    font-size: 25px;
+    color: #fff;
+}
+/* To prevent animation in mobile view */
+@media screen and (max-width: 500px) {
+	.wrapper .social-media:hover {
+		width: 50px;
+	}
+}

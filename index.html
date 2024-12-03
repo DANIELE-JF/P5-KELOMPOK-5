@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas P5 Kelompok 5</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Kelompok 5</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Gangguan Tidur</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Gangguan Tidur Pada Siswa</h2>
+        <!-- <div class="circle">
+            <div class="c1"></div>
+            <div class="c2"></div>
+        </div> -->
+        <p>
+        Kurangnya tidur atau gangguan tidur pada siswa menjadi masalah yang semakin banyak ditemui, terutama di kalangan remaja yang sedang dalam masa pertumbuhan. Tidur yang cukup sangat penting untuk mendukung perkembangan fisik dan mental mereka. Namun, kebiasaan begadang, penggunaan gadget hingga larut malam, serta tekanan akademik sering kali mengganggu kualitas tidur siswa. Hal ini dapat berdampak buruk pada konsentrasi, daya ingat, suasana hati, dan bahkan kesehatan secara keseluruhan. Kurangnya tidur yang berkepanjangan juga dapat memengaruhi prestasi akademik dan kemampuan sosial siswa. Oleh karena itu, penting untuk memahami dan mengatasi masalah tidur ini agar siswa dapat mencapai potensi maksimal mereka.
+        <br><br>
+        Dampak dari kurang tidur pada siswa sangat signifikan. Kurang tidur dapat menyebabkan gangguan pada konsentrasi, memengaruhi daya ingat, dan menurunkan kemampuan dalam menyerap materi pelajaran. Selain itu, tidur yang tidak cukup juga dapat memengaruhi suasana hati, meningkatkan risiko stres, kecemasan, dan depresi, serta mengganggu interaksi sosial dengan teman-teman maupun keluarga. Dampak jangka panjang dari kurang tidur juga dapat memengaruhi kesehatan fisik, seperti meningkatkan risiko obesitas, gangguan metabolisme, dan masalah kardiovaskular. Penurunan kinerja akademik adalah salah satu dampak langsung yang sering terlihat akibat gangguan tidur yang kronis. Oleh karena itu, masalah tidur yang tidak diatasi dengan baik dapat menghambat potensi siswa untuk meraih prestasi terbaik mereka.
+        <br><br>
+        Untuk mengatasi masalah tidur pada siswa, penting bagi mereka untuk mengetahui dan menerapkan tips-tips yang dapat membantu meningkatkan kualitas tidur mereka. Infografis ini akan menyajikan langkah-langkah praktis yang bisa diikuti, mulai dari menciptakan rutinitas tidur yang teratur, menjaga pola makan yang sehat, hingga menciptakan lingkungan tidur yang mendukung. Menghindari stimulasi berlebih sebelum tidur, seperti menggunakan gadget atau mengonsumsi kafein, juga sangat penting untuk membantu tubuh dan pikiran bersiap untuk tidur yang nyenyak.
+        <br><br>
+        Dengan memperhatikan tips-tips ini, siswa dapat meningkatkan kualitas tidur mereka, yang pada gilirannya akan berdampak positif pada kesehatan fisik, mental, dan prestasi akademik mereka. Tidur yang cukup tidak hanya membantu mereka fokus dan belajar lebih efektif, tetapi juga menjaga keseimbangan emosi dan meningkatkan kualitas hidup secara keseluruhan. Infografis ini dirancang untuk memberikan panduan mudah dan bermanfaat dalam menciptakan kebiasaan tidur yang lebih baik, sehingga siswa dapat mengoptimalkan potensi mereka di sekolah dan dalam kehidupan sehari-hari.
+    </p>
+    
+    <div class="info" id="info"></div>
+    <div id="infografisModal" class="modal">
+        <span class="close">&times;</span>
+        <img src="images/infografis.png" alt="Infografis" class="modal-content">
+    </div>
+    
+    </div>
+        <!-- Code for the footer -->
+        <div class="footer" id="footer">
+            Do Follow Me On:
+            <div class="sm">
+                <div class="sm1"><i class="fa-brands fa-instagram"></i></div>
+                <div class="sm2"><i class="fa-brands fa-linkedin"></i></div>
+                <div class="sm3"><i class="fa-brands fa-facebook"></i></div>
+                <div class="sm4"><i class="fa-brands fa-tiktok"></i></div>
+            </div>
+            <span>A website created by Kelompok 5<br>Students Ignatius Global School</span>
+        </div>
+    
+        <!-- The button to scroll back to top -->
+        <a id="top" href="#"> <i class="fas fa-arrow-up"></i> </a>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            text.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+
+    // Mendapatkan elemen modal dan tombol close
+    var modal = document.getElementById("infografisModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Ketika div dengan class 'info' diklik, tampilkan modal
+    document.getElementById("info").onclick = function() {
+        modal.style.display = "flex";  // Menampilkan modal
+    }
+
+    // Ketika tombol close (x) diklik, sembunyikan modal
+    span.onclick = function() {
+        modal.style.display = "none";  // Menyembunyikan modal
+    }
+
+    // Menutup modal jika pengguna mengklik di luar modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    </script>
+</body>
+</html>
